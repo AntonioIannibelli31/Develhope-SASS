@@ -35,8 +35,7 @@
 }
 .paragrafi p {
   padding: 15px;
+  height: -moz-fit-content;
   height: fit-content;
   text-align: center;
-}
-
-/*# sourceMappingURL=es1.css.map */
+}/*# sourceMappingURL=es1.css.map */

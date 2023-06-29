@@ -1,0 +1,55 @@
+.contenitore {
+  border: 1px solid red;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenitore h1 {
+  color: green;
+  border-bottom: 2px solid blue;
+  padding-top: 25px;
+}
+.contenitore section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.contenitore section article:nth-child(odd) {
+  color: blue;
+  border: 1px solid green;
+  font-size: 1rem;
+  padding-bottom: 10px;
+  width: 100%;
+  justify-self: center;
+}
+.contenitore section article:nth-child(even) {
+  color: red;
+  border: 1px solid green;
+  font-size: 1rem;
+  padding-bottom: 10px;
+  width: 100%;
+  justify-self: center;
+}
+.contenitore section:last-child {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.contenitore section:last-child article {
+  color: green;
+  border: 1px solid blue;
+  font-size: 24px;
+  padding-bottom: 10px;
+  width: 100%;
+  justify-self: center;
+  margin: 0 15px;
+  text-align: center;
+  padding: 20px 0;
+}/*# sourceMappingURL=es2.css.map */
