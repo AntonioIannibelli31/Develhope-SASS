@@ -1,0 +1,62 @@
+.contenitore h2, .contenitore h1 {
+  color: green;
+}
+
+.contenitore {
+  border: 0.0625rem solid red;
+  margin-left: 0.9375rem;
+  margin-right: 0.9375rem;
+  margin-top: 0.9375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contenitore h1 {
+  border-bottom: 0.125rem solid blue;
+  padding-top: 1.5625rem;
+}
+.contenitore h2 {
+  border: 0.0625rem solid red;
+  padding: 1rem;
+}
+.contenitore section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+.contenitore section article:nth-child(odd) {
+  color: blue;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding-bottom: 0.625rem;
+  width: 100%;
+  justify-self: center;
+}
+.contenitore section article:nth-child(even) {
+  color: red;
+  border: 0.0625rem solid green;
+  font-size: 1rem;
+  padding-bottom: 0.625rem;
+  width: 100%;
+  justify-self: center;
+}
+.contenitore section:last-child {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.contenitore section:last-child article {
+  color: green;
+  border: 0.0625rem solid blue;
+  font-size: 1.5rem;
+  padding-bottom: 0.625rem;
+  width: 100%;
+  justify-self: center;
+  margin: 0rem 0.9375rem;
+  text-align: center;
+  padding: 1.25rem 0rem;
+}/*# sourceMappingURL=es4.css.map */
