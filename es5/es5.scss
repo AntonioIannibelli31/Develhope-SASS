@@ -1,0 +1,94 @@
+
+@use "sass:color";
+@function convertRem($size){
+    $rem: calc($size / 16) + rem;
+    @return $rem;
+}
+@mixin article-style($color, $bordercolor:green, $fontsize: convertRem(16)){
+    color: $color;
+    border: convertRem(1) solid $bordercolor; 
+    font-size: $fontsize;
+    padding-bottom: convertRem(10);
+    width: 100%;
+    justify-self: center;
+}
+%text{
+    color: green;
+}
+.contenitore{
+    border: convertRem(1) solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    
+    margin-top: convertRem(15);
+    h1{
+        @extend %text;
+        border-bottom: convertRem(1) solid blue;
+        padding-top: convertRem(20);
+    }
+    h2{
+        display: flex;
+        justify-content: center;
+        padding: 20px 10px;
+        @extend %text;
+        border: convertRem(1) solid red;
+        
+    }
+    section{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-left: convertRem(20);
+        margin-right: convertRem(20);
+        article:nth-child(even){
+            @include article-style(red);
+        }
+        article:nth-child(odd){
+            @include article-style(blue);
+        }
+
+    }
+    .box{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        div{
+            border: convertRem(1) solid red;
+            width: convertRem(45);
+            height: convertRem(45);
+            padding: 5px 7px;
+        }
+    }
+    .last{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        article:last-of-type{
+            @include article-style(green, blue, convertRem(24));
+            padding: convertRem(20) convertRem(0);
+            margin: convertRem(10) convertRem(15);
+            text-align: center;
+        }
+    }
+}
+$fontsizes: 1rem, 2rem, 3rem;
+@each $fontsize in $fontsizes{
+    .fs-#{$fontsize}{
+        font-size: $fontsize;
+    }
+}
+@for $index from 1 through 20{
+    .contenitore{
+            div:nth-child(#{$index}){
+                background-color:darken(white, $amount:( calc($index * 5)));
+                color: lighten(black, $amount:( calc($index * 5)));
+            @if $index==10{
+            color: red;
+            background-color: blue;
+        }
+    }
+}
+    }
